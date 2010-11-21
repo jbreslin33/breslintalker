@@ -10,9 +10,9 @@ public:
     Talker();
     virtual ~Talker(void);
 
-    int sendMessageToServer (char newMessageToServer[10] );
+    int sendMessageToServer (char newMessageToServer[100] );
     void setServerIP(char* ip) { mServerIP = ip; }
-    void sendMessageToClients(char newMessageToClients[10]);
+    void sendMessageToClients(char newMessageToClients[100]);
 
     char* getMessage () { return mMessage;  }
     char* getServerIP() { return mServerIP; }

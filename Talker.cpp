@@ -21,9 +21,9 @@ Talker::~Talker(void)
 {
 }
 
-int Talker::sendMessageToServer (char newMessageToServer[10] )
+int Talker::sendMessageToServer (char newMessageToServer[100] )
 {
-	if (strlen(newMessageToServer) > 10)
+	if (strlen(newMessageToServer) > 100)
 	{
 		perror("message too big!");
 	}
