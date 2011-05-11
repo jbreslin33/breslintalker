@@ -48,7 +48,7 @@
    <!-- Retrieve records from database -->
    <?php
 
-   $db = pg_connect("host=192.168.1.104 port=5432 dbname=roacheopen user=postgres password=mibesfat");
+   $db = pg_connect("host=localhost dbname=roacheopen user=postgres password=mibesfat");
    $query = "select *";
    $query .= " from golfers where status = 1 ";
    $query .= " order by currentrank;";

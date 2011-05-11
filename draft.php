@@ -70,11 +70,10 @@
 
    <!-- Retrieve records from database -->
    <?php
+$db = pg_connect("host=localhost dbname=roacheopen user=postgres password=mibesfat")
 
-   $db = pg_connect("host=www.breslincomputerclub.com port=5432 dbname=roacheopen user=postgres password=mibesfat");
-   $query = "select *";
-   $query .= " from golfers where currentRank < 499 ";
-   $query .= " order by currentrank;";
+    or die('Could not connect: ' . pg_last_error());
+   $query = "select * from golfers;";
    $dbResult = pg_query($query);
 
    if (!$dbResult) {
