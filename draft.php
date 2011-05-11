@@ -19,10 +19,10 @@
 <div id="container">
 	<div id="header"><div class="headerText">ROACHE OPEN 9</div>
 
-		     <div class="center"><b class="menu"><a href="index.htm">Home</a> | <a href="scorecard.htm">ScoreCard</a>
-					  | <a href="directions.htm">Directions</a> | <a href="champs.htm">Champs</a> | <a href="rules.htm">Rules</a> |
-					  <a href="draft.php">Draft</a> | <a href="http://www.breslincomputerclub.com/phpBB3/">Smack Talk </a> | <a href="contact.htm">Contact</a></b></div>
-	      </div>
+<div class="center"><strong class="menu"><a href="index.htm">Home</a> | <a href="scorecard.htm">ScoreCard</a>
+	<a href="directions.htm">Directions</a> | <a href="champs.htm">Champs</a> | <a href="rules.htm">Rules</a> |
+	<a href="draft.php">Draft</a> | <a href="ranks.php">Players</a> | <a href="contact.htm">Contact</a></strong></div>
+</div>
 
 		<div id="content">
 			<div id="bodytext">
@@ -48,7 +48,7 @@
         If your team only has 3 players you will not be given extra shots. <br>
         If you want to have a guarantee of having a 4th player than make sure you <br>
         take one of the lesser ranked 1st or 2nd round players that will give you a higher 3rd
-        round pick. Obviously those who take a high ranked 1st rounder and a high ranked 2nd rounder 
+        round pick. Obviously those who take a high ranked 1st rounder and a high ranked 2nd rounder
         have a chance of not having a 3rd round player but they can take solice in the fact that they have
         a high ranked 1st and 2nd rounder.</b><br><br>
 
@@ -136,8 +136,8 @@ $db = pg_connect("host=localhost dbname=roacheopen user=postgres password=mibesf
         "<tr>
                          <td> <b> ***     </b>  </td>
                          <td> <b> ********************  Captains ************  </b>  </td>
-                         </tr>\n";  
-     
+                         </tr>\n";
+
    while ($i < $num) {
      $realname      = pg_Result ($dbResult, $i, 'realname');
      $curRank       = $i + 1;
@@ -153,21 +153,21 @@ $db = pg_connect("host=localhost dbname=roacheopen user=postgres password=mibesf
         "<tr>
                          <td> <b> ***     </b>  </td>
                          <td> <b> ********************  1st Rounders ************  </b>  </td>
-                         </tr>\n";  
+                         </tr>\n";
      }
      if ($curRank == $teams * 2) {
         echo
         "<tr>
                          <td> <b> ***     </b>  </td>
                          <td> <b> ********************  2nd Rounders ************  </b>  </td>
-                         </tr>\n";  
+                         </tr>\n";
      }
      if ($curRank == $teams * 3) {
         echo
         "<tr>
                          <td> <b> ***     </b>  </td>
                          <td> <b> ********************  3rd Rounders ************  </b>  </td>
-                         </tr>\n";  
+                         </tr>\n";
      }
 
 
@@ -217,9 +217,9 @@ $db = pg_connect("host=localhost dbname=roacheopen user=postgres password=mibesf
         "<tr>
                          <td> <b> ***     </b>  </td>
                          <td> <b> ********  </b>  </td>
-                         <td> <b> Captains </b>  </td>   
+                         <td> <b> Captains </b>  </td>
                          <td> <b> ************  </b>  </td>
-                         </tr>\n";  
+                         </tr>\n";
 
    while ($i < $num) {
      $realname      = pg_Result ($dbResult, $i, 'realname');
@@ -228,45 +228,45 @@ $db = pg_connect("host=localhost dbname=roacheopen user=postgres password=mibesf
      $picture       = pg_Result ($dbResult, $i, 'picture');
 
      $curRank       = $i + 1;
-                
+
      echo
 "<tr>
                          <td> <b> $curRank      </b> </td>
                          <td>     $picture           </td>
                          <td> <b> $realname     </b> </td>
                          <td>     $bio               </td>
-   
+
 
                          </tr>\n";
- 
-   
-                    
+
+
+
      if ($curRank == $teams) {
         echo
         "<tr>
                          <td> <b> ***     </b>  </td>
                          <td> <b> ********  </b>  </td>
-                         <td> <b> 1st Rounders </b>  </td>   
+                         <td> <b> 1st Rounders </b>  </td>
                          <td> <b> ************  </b>  </td>
-                         </tr>\n";  
+                         </tr>\n";
      }
      if ($curRank == $teams * 2) {
         echo
         "<tr>
                          <td> <b> ***     </b>  </td>
                          <td> <b> ********  </b>  </td>
-                         <td> <b> 2nd Rounders </b>  </td>   
+                         <td> <b> 2nd Rounders </b>  </td>
                          <td> <b> ************  </b>  </td>
-                         </tr>\n";  
+                         </tr>\n";
      }
      if ($curRank == $teams * 3) {
         echo
         "<tr>
                          <td> <b> ***     </b>  </td>
                          <td> <b> ********  </b>  </td>
-                         <td> <b> 3rd Rounders </b>  </td>   
+                         <td> <b> 3rd Rounders </b>  </td>
                          <td> <b> ************  </b>  </td>
-                         </tr>\n";  
+                         </tr>\n";
      }
 
      $i++;
