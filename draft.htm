@@ -21,7 +21,7 @@
 
 <div class="center"><strong class="menu"><a href="index.htm">Home</a> | <a href="scorecard.htm">ScoreCard</a>
 	<a href="directions.htm">Directions</a> | <a href="champs.htm">Champs</a> | <a href="rules.htm">Rules</a> |
-	<a href="draft.php">Draft</a> | <a href="ranks.php">Players</a> | <a href="contact.htm">Contact</a></strong></div>
+	<a href="draft.htm">Draft</a> | <a href="ranks.php">Players</a> | <a href="contact.htm">Contact</a></strong></div>
 </div>
 
 		<div id="content">
