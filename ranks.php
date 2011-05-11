@@ -30,7 +30,7 @@
 			<div id="bodytext">
 		<h1 class="title">Player Rankings Confirmed: <br> </h1>
 
-	
+
 
 <br>
 
@@ -48,7 +48,7 @@
    <!-- Retrieve records from database -->
    <?php
 
-   $db = pg_connect("host=192.168.1.114 port=5432 dbname=roacheopen user=postgres password=mibesfat");
+   $db = pg_connect("host=192.168.1.104 port=5432 dbname=roacheopen user=postgres password=mibesfat");
    $query = "select *";
    $query .= " from golfers where status = 1 ";
    $query .= " order by currentrank;";
@@ -114,8 +114,8 @@
         "<tr>
                          <td> <b> ***     </b>  </td>
                          <td> <b> ********************  Captains ************  </b>  </td>
-                         </tr>\n";  
-     
+                         </tr>\n";
+
    while ($i < $num) {
      $realname      = pg_Result ($dbResult, $i, 'realname');
      $curRank       = $i + 1;
@@ -131,21 +131,21 @@
         "<tr>
                          <td> <b> ***     </b>  </td>
                          <td> <b> ********************  1st Rounders ************  </b>  </td>
-                         </tr>\n";  
+                         </tr>\n";
      }
      if ($curRank == $teams * 2) {
         echo
         "<tr>
                          <td> <b> ***     </b>  </td>
                          <td> <b> ********************  2nd Rounders ************  </b>  </td>
-                         </tr>\n";  
+                         </tr>\n";
      }
      if ($curRank == $teams * 3) {
         echo
         "<tr>
                          <td> <b> ***     </b>  </td>
                          <td> <b> ********************  3rd Rounders ************  </b>  </td>
-                         </tr>\n";  
+                         </tr>\n";
      }
 
 
@@ -195,9 +195,9 @@
         "<tr>
                          <td> <b> ***     </b>  </td>
                          <td> <b> ********  </b>  </td>
-                         <td> <b> Captains </b>  </td>   
+                         <td> <b> Captains </b>  </td>
                          <td> <b> ************  </b>  </td>
-                         </tr>\n";  
+                         </tr>\n";
 
    while ($i < $num) {
      $realname      = pg_Result ($dbResult, $i, 'realname');
@@ -206,45 +206,45 @@
      $picture       = pg_Result ($dbResult, $i, 'picture');
 
      $curRank       = $i + 1;
-                
+
      echo
 "<tr>
                          <td> <b> $curRank      </b> </td>
                          <td>     $picture           </td>
                          <td> <b> $realname     </b> </td>
                          <td>     $bio               </td>
-   
+
 
                          </tr>\n";
- 
-   
-                    
+
+
+
      if ($curRank == $teams) {
         echo
         "<tr>
                          <td> <b> ***     </b>  </td>
                          <td> <b> ********  </b>  </td>
-                         <td> <b> 1st Rounders </b>  </td>   
+                         <td> <b> 1st Rounders </b>  </td>
                          <td> <b> ************  </b>  </td>
-                         </tr>\n";  
+                         </tr>\n";
      }
      if ($curRank == $teams * 2) {
         echo
         "<tr>
                          <td> <b> ***     </b>  </td>
                          <td> <b> ********  </b>  </td>
-                         <td> <b> 2nd Rounders </b>  </td>   
+                         <td> <b> 2nd Rounders </b>  </td>
                          <td> <b> ************  </b>  </td>
-                         </tr>\n";  
+                         </tr>\n";
      }
      if ($curRank == $teams * 3) {
         echo
         "<tr>
                          <td> <b> ***     </b>  </td>
                          <td> <b> ********  </b>  </td>
-                         <td> <b> 3rd Rounders </b>  </td>   
+                         <td> <b> 3rd Rounders </b>  </td>
                          <td> <b> ************  </b>  </td>
-                         </tr>\n";  
+                         </tr>\n";
      }
 
      $i++;
@@ -338,8 +338,8 @@
         "<tr>
                          <td> <b> ***     </b>  </td>
                          <td> <b> ********************  Captains ************  </b>  </td>
-                         </tr>\n";  
-     
+                         </tr>\n";
+
    while ($i < $num) {
      $realname      = pg_Result ($dbResult, $i, 'realname');
      $curRank       = $i + 1;
@@ -355,21 +355,21 @@
         "<tr>
                          <td> <b> ***     </b>  </td>
                          <td> <b> ********************  1st Rounders ************  </b>  </td>
-                         </tr>\n";  
+                         </tr>\n";
      }
      if ($curRank == $teams * 2) {
         echo
         "<tr>
                          <td> <b> ***     </b>  </td>
                          <td> <b> ********************  2nd Rounders ************  </b>  </td>
-                         </tr>\n";  
+                         </tr>\n";
      }
      if ($curRank == $teams * 3) {
         echo
         "<tr>
                          <td> <b> ***     </b>  </td>
                          <td> <b> ********************  3rd Rounders ************  </b>  </td>
-                         </tr>\n";  
+                         </tr>\n";
      }
 
 
@@ -385,9 +385,9 @@
 
    <br><br><br>
 
-		Detailed Player Ranks Unconfirmed: 
+		Detailed Player Ranks Unconfirmed:
 
-	
+
 
 <br>
 
@@ -427,9 +427,9 @@
         "<tr>
                          <td> <b> ***     </b>  </td>
                          <td> <b> ********  </b>  </td>
-                         <td> <b> Captains </b>  </td>   
+                         <td> <b> Captains </b>  </td>
                          <td> <b> ************  </b>  </td>
-                         </tr>\n";  
+                         </tr>\n";
 
    while ($i < $num) {
      $realname      = pg_Result ($dbResult, $i, 'realname');
@@ -438,45 +438,45 @@
      $picture       = pg_Result ($dbResult, $i, 'picture');
 
      $curRank       = $i + 1;
-                
+
      echo
 "<tr>
                          <td> <b> $curRank      </b> </td>
                          <td>     $picture           </td>
                          <td> <b> $realname     </b> </td>
                          <td>     $bio               </td>
-   
+
 
                          </tr>\n";
- 
-   
-                    
+
+
+
      if ($curRank == $teams) {
         echo
         "<tr>
                          <td> <b> ***     </b>  </td>
                          <td> <b> ********  </b>  </td>
-                         <td> <b> 1st Rounders </b>  </td>   
+                         <td> <b> 1st Rounders </b>  </td>
                          <td> <b> ************  </b>  </td>
-                         </tr>\n";  
+                         </tr>\n";
      }
      if ($curRank == $teams * 2) {
         echo
         "<tr>
                          <td> <b> ***     </b>  </td>
                          <td> <b> ********  </b>  </td>
-                         <td> <b> 2nd Rounders </b>  </td>   
+                         <td> <b> 2nd Rounders </b>  </td>
                          <td> <b> ************  </b>  </td>
-                         </tr>\n";  
+                         </tr>\n";
      }
      if ($curRank == $teams * 3) {
         echo
         "<tr>
                          <td> <b> ***     </b>  </td>
                          <td> <b> ********  </b>  </td>
-                         <td> <b> 3rd Rounders </b>  </td>   
+                         <td> <b> 3rd Rounders </b>  </td>
                          <td> <b> ************  </b>  </td>
-                         </tr>\n";  
+                         </tr>\n";
      }
 
      $i++;
@@ -493,7 +493,7 @@
 *********************************************************
 		<h1 class="title">Player Ranks, Unable to Attend: <br> </h1>
 
-	
+
 
 <br>
 
@@ -501,7 +501,7 @@
 
 
 
-	
+
 
 <br>
 
@@ -585,8 +585,8 @@
         "<tr>
                          <td> <b> ***     </b>  </td>
                          <td> <b> ********************  Captains ************  </b>  </td>
-                         </tr>\n";  
-     
+                         </tr>\n";
+
    while ($i < $num) {
      $realname      = pg_Result ($dbResult, $i, 'realname');
      $curRank       = $i + 1;
@@ -602,21 +602,21 @@
         "<tr>
                          <td> <b> ***     </b>  </td>
                          <td> <b> ********************  1st Rounders ************  </b>  </td>
-                         </tr>\n";  
+                         </tr>\n";
      }
      if ($curRank == $teams * 2) {
         echo
         "<tr>
                          <td> <b> ***     </b>  </td>
                          <td> <b> ********************  2nd Rounders ************  </b>  </td>
-                         </tr>\n";  
+                         </tr>\n";
      }
      if ($curRank == $teams * 3) {
         echo
         "<tr>
                          <td> <b> ***     </b>  </td>
                          <td> <b> ********************  3rd Rounders ************  </b>  </td>
-                         </tr>\n";  
+                         </tr>\n";
      }
 
 
@@ -662,9 +662,9 @@ Detailed Scouting Report for Unable to Attend:
         "<tr>
                          <td> <b> ***     </b>  </td>
                          <td> <b> ********  </b>  </td>
-                         <td> <b> Captains </b>  </td>   
+                         <td> <b> Captains </b>  </td>
                          <td> <b> ************  </b>  </td>
-                         </tr>\n";  
+                         </tr>\n";
 
    while ($i < $num) {
      $realname      = pg_Result ($dbResult, $i, 'realname');
@@ -673,45 +673,45 @@ Detailed Scouting Report for Unable to Attend:
      $picture       = pg_Result ($dbResult, $i, 'picture');
 
      $curRank       = $i + 1;
-                
+
      echo
 "<tr>
                          <td> <b> $curRank      </b> </td>
                          <td>     $picture           </td>
                          <td> <b> $realname     </b> </td>
                          <td>     $bio               </td>
-   
+
 
                          </tr>\n";
- 
-   
-                    
+
+
+
      if ($curRank == $teams) {
         echo
         "<tr>
                          <td> <b> ***     </b>  </td>
                          <td> <b> ********  </b>  </td>
-                         <td> <b> 1st Rounders </b>  </td>   
+                         <td> <b> 1st Rounders </b>  </td>
                          <td> <b> ************  </b>  </td>
-                         </tr>\n";  
+                         </tr>\n";
      }
      if ($curRank == $teams * 2) {
         echo
         "<tr>
                          <td> <b> ***     </b>  </td>
                          <td> <b> ********  </b>  </td>
-                         <td> <b> 2nd Rounders </b>  </td>   
+                         <td> <b> 2nd Rounders </b>  </td>
                          <td> <b> ************  </b>  </td>
-                         </tr>\n";  
+                         </tr>\n";
      }
      if ($curRank == $teams * 3) {
         echo
         "<tr>
                          <td> <b> ***     </b>  </td>
                          <td> <b> ********  </b>  </td>
-                         <td> <b> 3rd Rounders </b>  </td>   
+                         <td> <b> 3rd Rounders </b>  </td>
                          <td> <b> ************  </b>  </td>
-                         </tr>\n";  
+                         </tr>\n";
      }
 
      $i++;
