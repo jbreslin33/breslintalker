@@ -324,6 +324,19 @@
      $teams = 19;
    if ($num >= 77 && $num < 81)
      $teams = 20;
+   if ($num >= 81 && $num < 85)
+     $teams = 21;
+   if ($num >= 85 && $num < 89)
+     $teams = 22;
+   if ($num >= 89 && $num < 93)
+     $teams = 23;
+   if ($num >= 93 && $num < 97)
+     $teams = 24;
+   if ($num >= 97 && $num < 101)
+     $teams = 25;
+   if ($num >= 101 && $num < 105)
+     $teams = 26;
+
 
 
 
