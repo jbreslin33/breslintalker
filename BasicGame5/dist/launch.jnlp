@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jnlp codebase="http://192.168.1.104/breslintalker/BasicGame5/" href="launch.jnlp" spec="1.0+">
+    <information>
+        <title>MyGame</title>
+        <vendor>MyCompany</vendor>
+        <homepage href=""/>
+        <description>MyGame</description>
+        <description kind="short">MyGame</description>
+
+
+    <offline-allowed/>
+</information>
+<security>
+<all-permissions/>
+</security>
+    <resources>
+<j2se version="1.5+"/>
+<jar href="MyGame.jar" main="true"/>
+
+<jar href="lib/assets.jar"/>
+
+    <jar href="lib/jMonkeyEngine3.jar"/>
+<jar href="lib/jME3-lwjgl-natives.jar"/>
+<jar href="lib/jinput.jar"/>
+<jar href="lib/lwjgl.jar"/>
+</resources>
+    <application-desc main-class="mygame.Main">
+
+    </application-desc>
+</jnlp>
