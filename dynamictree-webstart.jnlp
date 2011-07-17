@@ -33,7 +33,7 @@
 
 <?xml version="1.0" encoding="UTF-8"?>
 <jnlp spec="1.0+" 
-        codebase="http://download.oracle.com/javase/tutorialJWS/deployment/webstart/ex6/webstart_ComponentArch_DynamicTreeDemo"
+        codebase="http://192.168.1.104/breslintalker"
         href="dynamictree-webstart.jnlp">
     <information>
         <title>Dynamic Tree Demo</title>
