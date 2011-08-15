@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <jnlp spec="1.0+"
-      codebase="file:///C:/sandbox/HelloJME3/build/hello"
+      codebase="http://www.roacheopen.com/breslintalker/hello/"
       href="hello.jnlp">
  
   <information>
     <title>breslin</title>
     <vendor>breslin</vendor>
-    <homepage href="192.168.1.104"/>
+    <homepage href="www.roacheopen.com"/>
     <description>Description</description>
     <description kind="short">short desc</description>
     <offline-allowed/>
