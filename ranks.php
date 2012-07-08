@@ -28,7 +28,7 @@
                         <div id="bodytext">
 
 
-  <h1 class="title">Current Projected Teams with BIOS: <br> </h1>
+  <h1 class="title">Current Projected Teams: <br> </h1>
 <br>
    <!-- Set up the table -->
   <table border='1'>
@@ -96,9 +96,7 @@ for ($t = 1; $t < $teams + 1; $t++)
         echo
         "<tr>
                          <td> <b> ***     </b>  </td>
-                         <td> <b> ********  </b>  </td>
-                         <td> <b> TEAM $t </b>  </td>
-                         <td> <b> ************  </b>  </td>
+                         <td> <b> *************************************** TEAM $t ***********************************************</b>  </td>
 
                          </tr>\n";
      //temp for calc 1
@@ -111,9 +109,7 @@ for ($t = 1; $t < $teams + 1; $t++)
      echo
 "<tr>
                          <td> <b> $curRank      </b> </td>
-                         <td>     $picture           </td>
                          <td> <b> $realname     </b> </td>
-                         <td>     $bio               </td>
                          </tr>\n";
 
 //temp for calc 2
@@ -127,9 +123,7 @@ for ($t = 1; $t < $teams + 1; $t++)
      echo
 "<tr>
                          <td> <b> $curRank      </b> </td>
-                         <td>     $picture           </td>
                          <td> <b> $realname     </b> </td>
-                         <td>     $bio               </td>
 
                          </tr>\n";
 
@@ -145,9 +139,7 @@ for ($t = 1; $t < $teams + 1; $t++)
      echo
 "<tr>
                          <td> <b> $curRank      </b> </td>
-                         <td>     $picture           </td>
                          <td> <b> $realname     </b> </td>
-                         <td>     $bio               </td>
 
                          </tr>\n";
 
@@ -163,9 +155,7 @@ for ($t = 1; $t < $teams + 1; $t++)
      echo
 "<tr>
                          <td> <b> $curRank      </b> </td>
-                         <td>     $picture           </td>
                          <td> <b> $realname     </b> </td>
-                         <td>     $bio               </td>
 
                          </tr>\n";
 
