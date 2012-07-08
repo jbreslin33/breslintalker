@@ -26,7 +26,7 @@
 </div>
            <div id="content">
                         <div id="bodytext">
-                <h1 class="title">Player Rankings Confirmed: <br> </h1>
+                <h1 class="title">Current Projected Teams: <br> </h1>
 <br>
    <!-- Set up the table -->
   <table border='1'>
