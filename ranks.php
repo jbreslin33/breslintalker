@@ -120,8 +120,8 @@ for ($t = 1; $t < $teams + 1; $t++)
 
 
 //temp for calc 3
-        $c = $i;
-        $c = $i;
+        $c = $teams * 3;
+ 	$c = $c - $i - 1;
      $realname      = pg_Result ($dbResult, $c, 'realname');
      $curRank       = $i + 1;
      echo
@@ -133,8 +133,8 @@ for ($t = 1; $t < $teams + 1; $t++)
 
 
 //temp for calc 4
-        $c = $i;
-        $c = $i;
+        $c = $teams * 4;
+ 	$c = $c - $i - 1;
      $realname      = pg_Result ($dbResult, $c, 'realname');
      $curRank       = $i + 1;
      echo
