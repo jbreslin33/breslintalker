@@ -95,7 +95,10 @@ for ($t = 1; $t < $teams + 1; $t++)
                          <td> <b> ***     </b>  </td>
                          <td> <b> ******************** TEAM $t ************  </b>  </td>
                          </tr>\n";
-     $realname      = pg_Result ($dbResult, $i, 'realname');
+     //temp for calc 1
+	$c = $i;
+	$c = $i;
+     $realname      = pg_Result ($dbResult, $c, 'realname');
      $curRank       = $i + 1;
      echo
 "<tr>
@@ -103,6 +106,46 @@ for ($t = 1; $t < $teams + 1; $t++)
                          <td> <b> $realname        </b>  </td>
 
                          </tr>\n";
+
+//temp for calc 2
+        $c = $i;
+        $c = $i;
+     $realname      = pg_Result ($dbResult, $c, 'realname');
+     $curRank       = $i + 1;
+     echo
+"<tr>
+                         <td> <b> $curRank         </b>  </td>
+                         <td> <b> $realname        </b>  </td>
+
+                         </tr>\n";
+
+
+//temp for calc 3
+        $c = $i;
+        $c = $i;
+     $realname      = pg_Result ($dbResult, $c, 'realname');
+     $curRank       = $i + 1;
+     echo
+"<tr>
+                         <td> <b> $curRank         </b>  </td>
+                         <td> <b> $realname        </b>  </td>
+
+                         </tr>\n";
+
+
+//temp for calc 4
+        $c = $i;
+        $c = $i;
+     $realname      = pg_Result ($dbResult, $c, 'realname');
+     $curRank       = $i + 1;
+     echo
+"<tr>
+                         <td> <b> $curRank         </b>  </td>
+                         <td> <b> $realname        </b>  </td>
+
+                         </tr>\n";
+
+
      $i++;
 }
    ?>
