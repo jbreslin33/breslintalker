@@ -88,12 +88,13 @@
      echo 'Database Query Retrieved Nothing!</td></tr>';
    }
    $i = 0;
+for ($t = 1; $t < $teams + 1; $t++)
+{
         echo
         "<tr>
                          <td> <b> ***     </b>  </td>
-                         <td> <b> ********************  Captains ************  </b>  </td>
+                         <td> <b> ******************** TEAM $t ************  </b>  </td>
                          </tr>\n";
-   while ($i < $num) {
      $realname      = pg_Result ($dbResult, $i, 'realname');
      $curRank       = $i + 1;
      echo
@@ -102,29 +103,8 @@
                          <td> <b> $realname        </b>  </td>
 
                          </tr>\n";
-     if ($curRank == $teams) {
-        echo
-        "<tr>
-                         <td> <b> ***     </b>  </td>
-                         <td> <b> ********************  1st Rounders ************  </b>  </td>
-                         </tr>\n";
-     }
-     if ($curRank == $teams * 2) {
-        echo
-        "<tr>
-                         <td> <b> ***     </b>  </td>
-                         <td> <b> ********************  2nd Rounders ************  </b>  </td>
-                         </tr>\n";
-     }
-     if ($curRank == $teams * 3) {
-        echo
-        "<tr>
-                         <td> <b> ***     </b>  </td>
-                         <td> <b> ********************  3rd Rounders ************  </b>  </td>
-                         </tr>\n";
-     }
      $i++;
-   }
+}
    ?>
 
    <!-- Close out the table and end -->
