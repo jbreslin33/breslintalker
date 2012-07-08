@@ -93,28 +93,40 @@ for ($t = 1; $t < $teams + 1; $t++)
         echo
         "<tr>
                          <td> <b> ***     </b>  </td>
-                         <td> <b> ******************** TEAM $t ************  </b>  </td>
+                         <td> <b> ********  </b>  </td>
+                         <td> <b> TEAM $t </b>  </td>
+                         <td> <b> ************  </b>  </td>
+
                          </tr>\n";
      //temp for calc 1
 	$c = $i;
      $realname      = pg_Result ($dbResult, $c, 'realname');
-     $curRank       = $i + 1;
+     $bio           = pg_Result ($dbResult, $c, 'bio');
+     $currentrank   = pg_Result ($dbResult, $c, 'currentrank');
+     $picture       = pg_Result ($dbResult, $c, 'picture');
+     $curRank       = $c + 1;
      echo
 "<tr>
-                         <td> <b> $curRank         </b>  </td>
-                         <td> <b> $realname        </b>  </td>
-
+			 <td> <b> $curRank      </b> </td>
+                         <td>     $picture           </td>
+                         <td> <b> $realname     </b> </td>
+                         <td>     $bio               </td>
                          </tr>\n";
 
 //temp for calc 2
         $c = $teams * 2;
  	$c = $c - $i - 1;
      $realname      = pg_Result ($dbResult, $c, 'realname');
-     $curRank       = $i + 1;
+     $bio           = pg_Result ($dbResult, $c, 'bio');
+     $currentrank   = pg_Result ($dbResult, $c, 'currentrank');
+     $picture       = pg_Result ($dbResult, $c, 'picture');
+     $curRank       = $c + 1;
      echo
 "<tr>
-                         <td> <b> $curRank         </b>  </td>
-                         <td> <b> $realname        </b>  </td>
+			 <td> <b> $curRank      </b> </td>
+                         <td>     $picture           </td>
+                         <td> <b> $realname     </b> </td>
+                         <td>     $bio               </td>
 
                          </tr>\n";
 
@@ -123,11 +135,16 @@ for ($t = 1; $t < $teams + 1; $t++)
         $c = $teams * 3;
  	$c = $c - $i - 1;
      $realname      = pg_Result ($dbResult, $c, 'realname');
-     $curRank       = $i + 1;
+     $bio           = pg_Result ($dbResult, $c, 'bio');
+     $currentrank   = pg_Result ($dbResult, $c, 'currentrank');
+     $picture       = pg_Result ($dbResult, $c, 'picture');
+     $curRank       = $c + 1;
      echo
 "<tr>
-                         <td> <b> $curRank         </b>  </td>
-                         <td> <b> $realname        </b>  </td>
+			 <td> <b> $curRank      </b> </td>
+                         <td>     $picture           </td>
+                         <td> <b> $realname     </b> </td>
+                         <td>     $bio               </td>
 
                          </tr>\n";
 
@@ -136,11 +153,16 @@ for ($t = 1; $t < $teams + 1; $t++)
         $c = $teams * 4;
  	$c = $c - $i - 1;
      $realname      = pg_Result ($dbResult, $c, 'realname');
-     $curRank       = $i + 1;
+     $bio           = pg_Result ($dbResult, $c, 'bio');
+     $currentrank   = pg_Result ($dbResult, $c, 'currentrank');
+     $picture       = pg_Result ($dbResult, $c, 'picture');
+     $curRank       = $c + 1;
      echo
 "<tr>
-                         <td> <b> $curRank         </b>  </td>
-                         <td> <b> $realname        </b>  </td>
+			 <td> <b> $curRank      </b> </td>
+                         <td>     $picture           </td>
+                         <td> <b> $realname     </b> </td>
+                         <td>     $bio               </td>
 
                          </tr>\n";
 
