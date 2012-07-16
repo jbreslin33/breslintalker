@@ -329,7 +329,7 @@ for ($t = 1; $t < $teams + 1; $t++)
 
 
 
-  <h1 class="title">Current Projected Teams: *with John Hernson drafting Mclain,Fabio and Bestwick <br> </h1>
+  <h1 class="title">Current Projected Teams: *Scenario with John Hernson drafting Mclain,Fabio and Bestwick <br> </h1>
 <br>
    <!-- Set up the table -->
   <table border='1'>
@@ -339,7 +339,7 @@ for ($t = 1; $t < $teams + 1; $t++)
    <?php
    $db = pg_connect("host=localhost dbname=roacheopen user=postgres password=mibesfat");
    $query = "select *";
-   $query .= " from golfers where status = 1 and realname != 'John Hernson' and realname != 'Steve \"Fabio\" Piantone' and realname != 'Charles Bestwick' ";
+   $query .= " from golfers where status = 1 and realname != 'John Hernson' and realname != 'Steve \"Fabio\" Piantone' and realname != 'Charles Bestwick' and realname != 'John Mclain'";
    $query .= " order by currentrank;";
    $dbResult = pg_query($query);
    if (!$dbResult) {
@@ -475,7 +475,7 @@ for ($t = 1; $t < $teams + 1; $t++)
 
 
 
-                <h1 class="title">Current Projected Teams with BIOS: *with John Hernson drafting Mclain,Fabio and Bestwick <br> </h1>
+                <h1 class="title">Current Projected Teams with BIOS: *Scenario With John Hernson drafting Mclain,Fabio and Bestwick <br> </h1>
 <br>
    <!-- Set up the table -->
   <table border='1'>
@@ -485,7 +485,7 @@ for ($t = 1; $t < $teams + 1; $t++)
    <?php
    $db = pg_connect("host=localhost dbname=roacheopen user=postgres password=mibesfat");
    $query = "select *";
-   $query .= " from golfers where status = 1 ";
+   $query .= " from golfers where status = 1 and realname != 'John Hernson' and realname != 'Steve \"Fabio\" Piantone' and realname != 'Charles Bestwick' and realname != 'John Mclain' ";
    $query .= " order by currentrank;";
    $dbResult = pg_query($query);
    if (!$dbResult) {
