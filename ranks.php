@@ -133,6 +133,101 @@
    <br><br><br>
 
 
+   <!-- Set up the table -->
+<b>Detailed Scouting report by Rank of Confirmed Players: <b><br><br>
+
+   <table border="1">
+
+   <tr>
+
+
+
+   </tr>
+
+   <!-- Retrieve records from database -->
+   <?php
+
+   $db = pg_connect("host=www.roacheopen.com port=5432 dbname=roacheopen user=postgres password=mibesfat");
+   $query = "select *";
+   $query .= " from golfers where status = 1 ";
+   $query .= " order by currentrank;";
+   $dbResult = pg_query($query);
+
+   if (!$dbResult) {
+     die("Database error...");
+   }
+
+   $num = pg_num_rows($dbResult);
+   if ($num == 0) {
+     echo '<tr><td colspan="4">';
+     echo 'Database Query Retrieved Nothing!</td></tr>';
+   }
+   $i = 0;
+
+        echo
+        "<tr>
+                         <td> <b> ***     </b>  </td>
+                         <td> <b> ********  </b>  </td>
+                         <td> <b> Captains </b>  </td>
+                         <td> <b> ************  </b>  </td>
+                         </tr>\n";
+
+   while ($i < $num) {
+     $realname      = pg_Result ($dbResult, $i, 'realname');
+     $bio           = pg_Result ($dbResult, $i, 'bio');
+     $currentrank   = pg_Result ($dbResult, $i, 'currentrank');
+     $picture       = pg_Result ($dbResult, $i, 'picture');
+
+     $curRank       = $i + 1;
+
+     echo
+"<tr>
+                         <td> <b> $curRank      </b> </td>
+                         <td>     $picture           </td>
+                         <td> <b> $realname     </b> </td>
+                         <td>     $bio               </td>
+
+
+                         </tr>\n";
+
+
+
+     if ($curRank == $teams) {
+        echo
+        "<tr>
+                         <td> <b> ***     </b>  </td>
+                         <td> <b> ********  </b>  </td>
+                         <td> <b> 1st Rounders </b>  </td>
+                         <td> <b> ************  </b>  </td>
+                         </tr>\n";
+     }
+     if ($curRank == $teams * 2) {
+        echo
+        "<tr>
+                         <td> <b> ***     </b>  </td>
+                         <td> <b> ********  </b>  </td>
+                         <td> <b> 2nd Rounders </b>  </td>
+                         <td> <b> ************  </b>  </td>
+                         </tr>\n";
+     }
+     if ($curRank == $teams * 3) {
+        echo
+        "<tr>
+                         <td> <b> ***     </b>  </td>
+                         <td> <b> ********  </b>  </td>
+                         <td> <b> 3rd Rounders </b>  </td>
+                         <td> <b> ************  </b>  </td>
+                         </tr>\n";
+     }
+
+     $i++;
+   }
+   ?>
+
+   <!-- Close out the table and end -->
+   </table>
+
+
   <h1 class="title">Current Projected Teams: <br> </h1>
 <br>
    <!-- Set up the table -->
@@ -736,101 +831,6 @@ for ($t = 1; $t < $teams + 1; $t++)
 
 
 <br><br>
-
-   <!-- Set up the table -->
-<b>Detailed Scouting report by Rank of Confirmed Players: <b><br><br>
-
-   <table border="1">
-
-   <tr>
-
-
-
-   </tr>
-
-   <!-- Retrieve records from database -->
-   <?php
-
-   $db = pg_connect("host=www.roacheopen.com port=5432 dbname=roacheopen user=postgres password=mibesfat");
-   $query = "select *";
-   $query .= " from golfers where status = 1 ";
-   $query .= " order by currentrank;";
-   $dbResult = pg_query($query);
-
-   if (!$dbResult) {
-     die("Database error...");
-   }
-
-   $num = pg_num_rows($dbResult);
-   if ($num == 0) {
-     echo '<tr><td colspan="4">';
-     echo 'Database Query Retrieved Nothing!</td></tr>';
-   }
-   $i = 0;
-
-        echo
-        "<tr>
-                         <td> <b> ***     </b>  </td>
-                         <td> <b> ********  </b>  </td>
-                         <td> <b> Captains </b>  </td>
-                         <td> <b> ************  </b>  </td>
-                         </tr>\n";
-
-   while ($i < $num) {
-     $realname      = pg_Result ($dbResult, $i, 'realname');
-     $bio           = pg_Result ($dbResult, $i, 'bio');
-     $currentrank   = pg_Result ($dbResult, $i, 'currentrank');
-     $picture       = pg_Result ($dbResult, $i, 'picture');
-
-     $curRank       = $i + 1;
-
-     echo
-"<tr>
-                         <td> <b> $curRank      </b> </td>
-                         <td>     $picture           </td>
-                         <td> <b> $realname     </b> </td>
-                         <td>     $bio               </td>
-
-
-                         </tr>\n";
-
-
-
-     if ($curRank == $teams) {
-        echo
-        "<tr>
-                         <td> <b> ***     </b>  </td>
-                         <td> <b> ********  </b>  </td>
-                         <td> <b> 1st Rounders </b>  </td>
-                         <td> <b> ************  </b>  </td>
-                         </tr>\n";
-     }
-     if ($curRank == $teams * 2) {
-        echo
-        "<tr>
-                         <td> <b> ***     </b>  </td>
-                         <td> <b> ********  </b>  </td>
-                         <td> <b> 2nd Rounders </b>  </td>
-                         <td> <b> ************  </b>  </td>
-                         </tr>\n";
-     }
-     if ($curRank == $teams * 3) {
-        echo
-        "<tr>
-                         <td> <b> ***     </b>  </td>
-                         <td> <b> ********  </b>  </td>
-                         <td> <b> 3rd Rounders </b>  </td>
-                         <td> <b> ************  </b>  </td>
-                         </tr>\n";
-     }
-
-     $i++;
-   }
-   ?>
-
-   <!-- Close out the table and end -->
-   </table>
-
 <br><br>
 ********************************************************
 <br>
