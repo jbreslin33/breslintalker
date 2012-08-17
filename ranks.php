@@ -539,7 +539,7 @@ for ($t = 1; $t < $teams + 1; $t++)
    <?php
    $db = pg_connect("host=localhost dbname=roacheopen user=postgres password=mibesfat");
    $query = "select *";
-   $query .= " from golfers where status = 1 and realname != 'John Hernson' and realname != 'Steve \"Fabio\" Piantone' and realname != 'Charles Bestwick' and realname != 'John Mclain'";
+   $query .= " from golfers where status = 1 and realname != 'John Hernson' and realname != 'Steve \"Fabio\" Piantone' and realname != 'Charles Bestwick' and realname != 'John Mclain' and realname != 'Bob Knowles' and realname != 'Russian Steve' and realname != 'Dave Bellenzeni' and realname != 'Stephen Pietropaula'";
    $query .= " order by currentrank;";
    $dbResult = pg_query($query);
    if (!$dbResult) {
