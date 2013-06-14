@@ -1,3 +1,4 @@
+create schema roacheopen;
 /*
 Navicat PGSQL Data Transfer
 
