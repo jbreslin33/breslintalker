@@ -1,2 +1,2 @@
-sudo -u postgres psql -d abcandyou -f golfers.sql
+sudo -u postgres psql -d roacheopen -f golfers.sql
 

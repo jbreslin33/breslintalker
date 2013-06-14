@@ -37,7 +37,7 @@
    <?php
    $db = pg_connect("host=localhost dbname=roacheopen user=postgres password=mibesfat");
    $query = "select *";
-   $query .= " from golfers where status = 1 ";
+   $query .= " from roacheopen.golfers where status = 1 ";
    $query .= " order by currentrank;";
    $dbResult = pg_query($query);
    if (!$dbResult) {
@@ -149,7 +149,7 @@
 
    $db = pg_connect("host=www.roacheopen.com port=5432 dbname=roacheopen user=postgres password=mibesfat");
    $query = "select *";
-   $query .= " from golfers where status = 1 ";
+   $query .= " from roacheopen.golfers where status = 1 ";
    $query .= " order by currentrank;";
    $dbResult = pg_query($query);
 
@@ -238,7 +238,7 @@
    <?php
    $db = pg_connect("host=localhost dbname=roacheopen user=postgres password=mibesfat");
    $query = "select *";
-   $query .= " from golfers where status = 1 ";
+   $query .= " from roacheopen.golfers where status = 1 ";
    $query .= " order by currentrank;";
    $dbResult = pg_query($query);
    if (!$dbResult) {
@@ -384,7 +384,7 @@ for ($t = 1; $t < $teams + 1; $t++)
    <?php
    $db = pg_connect("host=localhost dbname=roacheopen user=postgres password=mibesfat");
    $query = "select *";
-   $query .= " from golfers where status = 1 ";
+   $query .= " from roacheopen.golfers where status = 1 ";
    $query .= " order by currentrank;";
    $dbResult = pg_query($query);
    if (!$dbResult) {
@@ -539,7 +539,7 @@ for ($t = 1; $t < $teams + 1; $t++)
    <?php
    $db = pg_connect("host=localhost dbname=roacheopen user=postgres password=mibesfat");
    $query = "select *";
-   $query .= " from golfers where status = 1 and realname != 'John Hernson' and realname != 'Steve \"Fabio\" Piantone' and realname != 'Charles Bestwick' and realname != 'John Mclain' and realname != 'Bob Knowles' and realname != 'Russian Steve' and realname != 'Dave Bellenzeni' and realname != 'Stephen Pietropaula'";
+   $query .= " from roacheopen.golfers where status = 1 and realname != 'John Hernson' and realname != 'Steve \"Fabio\" Piantone' and realname != 'Charles Bestwick' and realname != 'John Mclain' and realname != 'Bob Knowles' and realname != 'Russian Steve' and realname != 'Dave Bellenzeni' and realname != 'Stephen Pietropaula'";
    $query .= " order by currentrank;";
    $dbResult = pg_query($query);
    if (!$dbResult) {
@@ -685,7 +685,7 @@ for ($t = 1; $t < $teams + 1; $t++)
    <?php
    $db = pg_connect("host=localhost dbname=roacheopen user=postgres password=mibesfat");
    $query = "select *";
-   $query .= " from golfers where status = 1 and realname != 'John Hernson' and realname != 'Steve \"Fabio\" Piantone' and realname != 'Charles Bestwick' and realname != 'John Mclain' ";
+   $query .= " from roacheopen.golfers where status = 1 and realname != 'John Hernson' and realname != 'Steve \"Fabio\" Piantone' and realname != 'Charles Bestwick' and realname != 'John Mclain' ";
    $query .= " order by currentrank;";
    $dbResult = pg_query($query);
    if (!$dbResult) {
@@ -851,7 +851,7 @@ for ($t = 1; $t < $teams + 1; $t++)
 
    $db = pg_connect("host=www.roacheopen.com port=5432 dbname=roacheopen user=postgres password=mibesfat");
    $query = "select *";
-   $query .= " from golfers where status = 2 ";
+   $query .= " from roacheopen.golfers where status = 2 ";
    $query .= " order by currentrank;";
    $dbResult = pg_query($query);
 
@@ -998,7 +998,7 @@ for ($t = 1; $t < $teams + 1; $t++)
 
    $db = pg_connect("host=www.roacheopen.com port=5432 dbname=roacheopen user=postgres password=mibesfat");
    $query = "select *";
-   $query .= " from golfers where status = 2 ";
+   $query .= " from roacheopen.golfers where status = 2 ";
    $query .= " order by currentrank;";
    $dbResult = pg_query($query);
 
@@ -1111,7 +1111,7 @@ for ($t = 1; $t < $teams + 1; $t++)
 
    $db = pg_connect("host=www.roacheopen.com port=5432 dbname=roacheopen user=postgres password=mibesfat");
    $query = "select *";
-   $query .= " from golfers where status = 3 ";
+   $query .= " from roacheopen.golfers where status = 3 ";
    $query .= " order by currentrank;";
    $dbResult = pg_query($query);
 
@@ -1233,7 +1233,7 @@ Detailed Scouting Report for Unable to Attend:
 
    $db = pg_connect("host=www.roacheopen.com port=5432 dbname=roacheopen user=postgres password=mibesfat");
    $query = "select *";
-   $query .= " from golfers where status = 3 ";
+   $query .= " from roacheopen.golfers where status = 3 ";
    $query .= " order by currentrank;";
    $dbResult = pg_query($query);
 
