@@ -144,6 +144,7 @@
    <!-- Retrieve records from database -->
    <?php
 
+   $db = pg_connect("host=www.roacheopen.com port=5432 dbname=roacheopen user=postgres password=mibesfat");
    $query = "select *";
    $query .= " from roacheopen.golfers where status = 1 ";
    $query .= " order by currentrank;";
@@ -232,6 +233,7 @@
    </tr>
    <!-- Retrieve records from database -->
    <?php
+   $db = pg_connect("host=localhost dbname=roacheopen user=postgres password=mibesfat");
    $query = "select *";
    $query .= " from roacheopen.golfers where status = 1 ";
    $query .= " order by currentrank;";
@@ -377,6 +379,7 @@ for ($t = 1; $t < $teams + 1; $t++)
    </tr>
    <!-- Retrieve records from database -->
    <?php
+   $db = pg_connect("host=localhost dbname=roacheopen user=postgres password=mibesfat");
    $query = "select *";
    $query .= " from roacheopen.golfers where status = 1 ";
    $query .= " order by currentrank;";
@@ -523,6 +526,306 @@ for ($t = 1; $t < $teams + 1; $t++)
 
 
 
+  <h1 class="title">Current Projected Teams: *Scenario with John Hernson drafting Mclain,Fabio and Bestwick <br> </h1>
+<br>
+   <!-- Set up the table -->
+  <table border='1'>
+   <tr>
+   </tr>
+   <!-- Retrieve records from database -->
+   <?php
+   $db = pg_connect("host=localhost dbname=roacheopen user=postgres password=mibesfat");
+   $query = "select *";
+   $query .= " from roacheopen.golfers where status = 1 and realname != 'John Hernson' and realname != 'Steve \"Fabio\" Piantone' and realname != 'Charles Bestwick' and realname != 'John Mclain' and realname != 'Bob Knowles' and realname != 'Russian Steve' and realname != 'Dave Bellenzeni' and realname != 'Stephen Pietropaula'";
+   $query .= " order by currentrank;";
+   $dbResult = pg_query($query);
+   if (!$dbResult) {
+     die("Database error...");
+   }
+   $num = pg_num_rows($dbResult);
+   if ($num >= 0 && $num < 5)
+     $teams = 1;
+   if ($num >= 5 && $num < 9)
+     $teams = 2;
+   if ($num >= 9 && $num < 13)
+     $teams = 3;
+   if ($num >= 13 && $num < 17)
+     $teams = 4;
+   if ($num >= 17 && $num < 21)
+     $teams = 5;
+   if ($num >= 21 && $num < 25)
+     $teams = 6;
+   if ($num >= 25 && $num < 29)
+     $teams = 7;
+   if ($num >= 29 && $num < 33)
+     $teams = 8;
+   if ($num >= 33 && $num < 37)
+     $teams = 9;
+   if ($num >= 37 && $num < 41)
+     $teams = 10;
+   if ($num >= 41 && $num < 45)
+     $teams = 11;
+   if ($num >= 45 && $num < 49)
+     $teams = 12;
+   if ($num >= 49 && $num < 53)
+     $teams = 13;
+   if ($num >= 53 && $num < 57)
+     $teams = 14;
+   if ($num >= 57 && $num < 61)
+     $teams = 15;
+   if ($num >= 61 && $num < 65)
+     $teams = 16;
+   if ($num >= 65 && $num < 69)
+     $teams = 17;
+   if ($num >= 69 && $num < 73)
+     $teams = 18;
+   if ($num >= 73 && $num < 77)
+     $teams = 19;
+   if ($num >= 77 && $num < 81)
+     $teams = 20;
+
+  if ($num == 0) {
+     echo '<tr><td colspan="4">';
+     echo 'Database Query Retrieved Nothing!</td></tr>';
+   }
+   $i = 0;
+for ($t = 1; $t < $teams + 1; $t++)
+{
+        echo
+        "<tr>
+                         <td> <b> ***     </b>  </td>
+                         <td> <b> *************************************** TEAM $t ***********************************************</b>  </td>
+
+                         </tr>\n";
+     //temp for calc 1
+        $c = $i;
+     $realname      = pg_Result ($dbResult, $c, 'realname');
+     $bio           = pg_Result ($dbResult, $c, 'bio');
+     $currentrank   = pg_Result ($dbResult, $c, 'currentrank');
+     $picture       = pg_Result ($dbResult, $c, 'picture');
+     $curRank       = $c + 1;
+     echo
+"<tr>
+                         <td> <b> $curRank      </b> </td>
+                         <td> <b> $realname     </b> </td>
+                         </tr>\n";
+
+//temp for calc 2
+        $c = $teams * 2;
+        $c = $c - $i - 1;
+     $realname      = pg_Result ($dbResult, $c, 'realname');
+     $bio           = pg_Result ($dbResult, $c, 'bio');
+     $currentrank   = pg_Result ($dbResult, $c, 'currentrank');
+     $picture       = pg_Result ($dbResult, $c, 'picture');
+     $curRank       = $c + 1;
+     echo
+"<tr>
+                         <td> <b> $curRank      </b> </td>
+                         <td> <b> $realname     </b> </td>
+
+                         </tr>\n";
+
+
+//temp for calc 3
+        $c = $teams * 3;
+        $c = $c - $i - 1;
+     $realname      = pg_Result ($dbResult, $c, 'realname');
+     $bio           = pg_Result ($dbResult, $c, 'bio');
+     $currentrank   = pg_Result ($dbResult, $c, 'currentrank');
+     $picture       = pg_Result ($dbResult, $c, 'picture');
+     $curRank       = $c + 1;
+     echo
+"<tr>
+                         <td> <b> $curRank      </b> </td>
+                         <td> <b> $realname     </b> </td>
+
+                         </tr>\n";
+
+
+//temp for calc 4
+        $c = $teams * 4;
+        $c = $c - $i - 1;
+     $realname      = pg_Result ($dbResult, $c, 'realname');
+     $bio           = pg_Result ($dbResult, $c, 'bio');
+     $currentrank   = pg_Result ($dbResult, $c, 'currentrank');
+     $picture       = pg_Result ($dbResult, $c, 'picture');
+     $curRank       = $c + 1;
+     echo
+"<tr>
+                         <td> <b> $curRank      </b> </td>
+                         <td> <b> $realname     </b> </td>
+
+                         </tr>\n";
+
+
+     $i++;
+}
+   ?>
+
+   <!-- Close out the table and end -->
+   </table>
+   <br><br><br>
+
+
+<br><br>
+
+
+
+
+                <h1 class="title">Current Projected Teams with BIOS: *Scenario With John Hernson drafting Mclain,Fabio and Bestwick <br> </h1>
+<br>
+   <!-- Set up the table -->
+  <table border='1'>
+   <tr>
+   </tr>
+   <!-- Retrieve records from database -->
+   <?php
+   $db = pg_connect("host=localhost dbname=roacheopen user=postgres password=mibesfat");
+   $query = "select *";
+   $query .= " from roacheopen.golfers where status = 1 and realname != 'John Hernson' and realname != 'Steve \"Fabio\" Piantone' and realname != 'Charles Bestwick' and realname != 'John Mclain' ";
+   $query .= " order by currentrank;";
+   $dbResult = pg_query($query);
+   if (!$dbResult) {
+     die("Database error...");
+   }
+   $num = pg_num_rows($dbResult);
+   if ($num >= 0 && $num < 5)
+     $teams = 1;
+   if ($num >= 5 && $num < 9)
+     $teams = 2;
+   if ($num >= 9 && $num < 13)
+     $teams = 3;
+   if ($num >= 13 && $num < 17)
+     $teams = 4;
+   if ($num >= 17 && $num < 21)
+     $teams = 5;
+   if ($num >= 21 && $num < 25)
+     $teams = 6;
+   if ($num >= 25 && $num < 29)
+     $teams = 7;
+   if ($num >= 29 && $num < 33)
+     $teams = 8;
+   if ($num >= 33 && $num < 37)
+     $teams = 9;
+   if ($num >= 37 && $num < 41)
+     $teams = 10;
+   if ($num >= 41 && $num < 45)
+     $teams = 11;
+   if ($num >= 45 && $num < 49)
+     $teams = 12;
+   if ($num >= 49 && $num < 53)
+     $teams = 13;
+   if ($num >= 53 && $num < 57)
+     $teams = 14;
+   if ($num >= 57 && $num < 61)
+     $teams = 15;
+   if ($num >= 61 && $num < 65)
+     $teams = 16;
+   if ($num >= 65 && $num < 69)
+     $teams = 17;
+   if ($num >= 69 && $num < 73)
+     $teams = 18;
+   if ($num >= 73 && $num < 77)
+     $teams = 19;
+   if ($num >= 77 && $num < 81)
+     $teams = 20;
+  if ($num == 0) {
+     echo '<tr><td colspan="4">';
+     echo 'Database Query Retrieved Nothing!</td></tr>';
+   }
+   $i = 0;
+for ($t = 1; $t < $teams + 1; $t++)
+{
+        echo
+        "<tr>
+                         <td> <b> ***     </b>  </td>
+                         <td> <b> *********  </b>  </td>
+                         <td> <b> TEAM $t </b>  </td>
+                         <td> <b> ***********************************  </b>  </td>
+
+                         </tr>\n";
+     //temp for calc 1
+	$c = $i;
+     $realname      = pg_Result ($dbResult, $c, 'realname');
+     $bio           = pg_Result ($dbResult, $c, 'bio');
+     $currentrank   = pg_Result ($dbResult, $c, 'currentrank');
+     $picture       = pg_Result ($dbResult, $c, 'picture');
+     $curRank       = $c + 1;
+     echo
+"<tr>
+			 <td> <b> $curRank      </b> </td>
+                         <td>     $picture           </td>
+                         <td> <b> $realname     </b> </td>
+                         <td>     $bio               </td>
+                         </tr>\n";
+
+//temp for calc 2
+        $c = $teams * 2;
+ 	$c = $c - $i - 1;
+     $realname      = pg_Result ($dbResult, $c, 'realname');
+     $bio           = pg_Result ($dbResult, $c, 'bio');
+     $currentrank   = pg_Result ($dbResult, $c, 'currentrank');
+     $picture       = pg_Result ($dbResult, $c, 'picture');
+     $curRank       = $c + 1;
+     echo
+"<tr>
+			 <td> <b> $curRank      </b> </td>
+                         <td>     $picture           </td>
+                         <td> <b> $realname     </b> </td>
+                         <td>     $bio               </td>
+
+                         </tr>\n";
+
+
+//temp for calc 3
+        $c = $teams * 3;
+ 	$c = $c - $i - 1;
+     $realname      = pg_Result ($dbResult, $c, 'realname');
+     $bio           = pg_Result ($dbResult, $c, 'bio');
+     $currentrank   = pg_Result ($dbResult, $c, 'currentrank');
+     $picture       = pg_Result ($dbResult, $c, 'picture');
+     $curRank       = $c + 1;
+     echo
+"<tr>
+			 <td> <b> $curRank      </b> </td>
+                         <td>     $picture           </td>
+                         <td> <b> $realname     </b> </td>
+                         <td>     $bio               </td>
+
+                         </tr>\n";
+
+
+//temp for calc 4
+        $c = $teams * 4;
+ 	$c = $c - $i - 1;
+     $realname      = pg_Result ($dbResult, $c, 'realname');
+     $bio           = pg_Result ($dbResult, $c, 'bio');
+     $currentrank   = pg_Result ($dbResult, $c, 'currentrank');
+     $picture       = pg_Result ($dbResult, $c, 'picture');
+     $curRank       = $c + 1;
+     echo
+"<tr>
+			 <td> <b> $curRank      </b> </td>
+                         <td>     $picture           </td>
+                         <td> <b> $realname     </b> </td>
+                         <td>     $bio               </td>
+
+                         </tr>\n";
+
+
+     $i++;
+}
+   ?>
+
+   <!-- Close out the table and end -->
+   </table>
+   <br><br><br>
+
+
+<br><br>
+
+
+
 
 <br><br>
 <br><br>
@@ -543,6 +846,7 @@ for ($t = 1; $t < $teams + 1; $t++)
    <!-- Retrieve records from database -->
    <?php
 
+   $db = pg_connect("host=www.roacheopen.com port=5432 dbname=roacheopen user=postgres password=mibesfat");
    $query = "select *";
    $query .= " from roacheopen.golfers where status = 2 ";
    $query .= " order by currentrank;";
@@ -689,6 +993,7 @@ for ($t = 1; $t < $teams + 1; $t++)
    <!-- Retrieve records from database -->
    <?php
 
+   $db = pg_connect("host=www.roacheopen.com port=5432 dbname=roacheopen user=postgres password=mibesfat");
    $query = "select *";
    $query .= " from roacheopen.golfers where status = 2 ";
    $query .= " order by currentrank;";
@@ -801,6 +1106,7 @@ for ($t = 1; $t < $teams + 1; $t++)
    <!-- Retrieve records from database -->
    <?php
 
+   $db = pg_connect("host=www.roacheopen.com port=5432 dbname=roacheopen user=postgres password=mibesfat");
    $query = "select *";
    $query .= " from roacheopen.golfers where status = 3 ";
    $query .= " order by currentrank;";
@@ -922,6 +1228,7 @@ Detailed Scouting Report for Unable to Attend:
    <!-- Retrieve records from database -->
    <?php
 
+   $db = pg_connect("host=www.roacheopen.com port=5432 dbname=roacheopen user=postgres password=mibesfat");
    $query = "select *";
    $query .= " from roacheopen.golfers where status = 3 ";
    $query .= " order by currentrank;";
